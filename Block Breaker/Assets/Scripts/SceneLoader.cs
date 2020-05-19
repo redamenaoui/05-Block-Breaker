@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour {
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
+        ScoreScript.levelValue = currentSceneIndex+1;
     }
 
     public void LoadStartScene()
@@ -21,4 +22,6 @@ public class SceneLoader : MonoBehaviour {
     {
         Application.Quit();
     }
+
+
 }
